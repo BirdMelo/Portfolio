@@ -17,15 +17,17 @@ body {
     color:aqua;
 }
 .apresentation{
-    margin: 15%;
+    margin: 10% 23%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .apresentation__content{
-    align-items: center;
     width: 615px;
     height: 452px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 
 }
 .apresentation__content__title{
@@ -40,6 +42,20 @@ body {
     height: auto;
 
 }
+.apresentation__links{
+    display: flex;
+    justify-content: space-between;
+}
 .button{
+    background-color: aqua;
+    width: 280px;
+    margin: 40px;
+    padding: 21.5px;
+    border-radius: 16px;
 
+    text-decoration: none;
+    color: #161616;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
