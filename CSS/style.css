@@ -4,33 +4,60 @@
     margin: 0;
     padding: 0;
 }
+:root{
+
+    --primaryColor: #161616;
+    --secundaryColor: #f6f6f6;
+    --tertiaryColor: #22D4FD;
+    --buttonInteraction: paleturquoise;
+
+    --font-title: "Krona One", sans-serif;
+    --fontText: Arial, Helvetica, sans-serif;
+
+}
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     box-sizing: border-box;
-    background-color: #161616;
-    color: #f6f6f6;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primaryColor);
+    color: var(--secundaryColor);
+    font-family: var(--fontText);
 
 }
+.header{
+    padding: 2% 0 0 15%;
+}
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+.header__menu__button{
+    color: var(--tertiaryColor);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+}
 .TitleHighlight {
-    color:aqua;
+    color:var(--tertiaryColor);
 }
 .apresentation {
-    padding: 8% 15%;
+    padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .apresentation__content {
     width: 615px;
-    height: 452px;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    gap: 40px;
 
 }
 .apresentation__content__title {
-    font-family: "Krona One", sans-serif;
+    font-family: var(--font-title);
     font-size: 36px;
 }
 .apresentation__content_text {
@@ -44,6 +71,7 @@ body {
 .apresentation__links {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 32px;
 }
@@ -51,26 +79,45 @@ body {
     display: flex;
     justify-content: center;
 
-    border: 2px solid aqua;
+    border: 2px solid var(--tertiaryColor);
     width: 378px;
     padding: 15px;
     border-radius: 8px;
     gap: 15px;
 
     text-decoration: none;
-    color: white;
+    color: var(--secundaryColor);
     font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
 .button:hover {
-    background-color: #202020;
+    background-color: var(--primaryColor);
 }
 .mainFooter {
-    background-color: #202020;
+    background-color: var(--primaryColor);
     
     padding: 25px;
 
     text-align: center;
     font-size: 20px;
+}
+
+.section__curriculum{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.section__curriculum__div{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.section__curriculum__link{
+    text-decoration: none;
+    color: var(--buttonInteraction);
+    font-weight: 600;
+}
+.section__curriculum__link:hover{
+    color: var(--tertiaryColor);
 }
