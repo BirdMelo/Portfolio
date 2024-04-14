@@ -9,7 +9,8 @@
     --primaryColor: #161616;
     --secundaryColor: #f6f6f6;
     --tertiaryColor: #22D4FD;
-    --buttonInteraction: paleturquoise;
+    --quaternaryColor: #212121;
+    --linkInteraction: paleturquoise;
 
     --font-title: "Krona One", sans-serif;
     --fontText: Arial, Helvetica, sans-serif;
@@ -32,12 +33,13 @@ body {
 }
 .header__menu{
     display: flex;
+    text-align: center;
     gap: 80px;
 }
 .header__menu__button{
     color: var(--tertiaryColor);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 .TitleHighlight {
@@ -46,11 +48,12 @@ body {
 .apresentation {
     padding: 5% 15%;
     display: flex;
+    gap: 82px;
     align-items: center;
     justify-content: space-between;
 }
 .apresentation__content {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -58,14 +61,13 @@ body {
 }
 .apresentation__content__title {
     font-family: var(--font-title);
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 .apresentation__content_text {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .profilePicture {
-    width: auto;
-    height: 457px;
+    width: 35%;
 
 }
 .apresentation__links {
@@ -80,27 +82,27 @@ body {
     justify-content: center;
 
     border: 2px solid var(--tertiaryColor);
-    width: 378px;
+    width: 50%;
     padding: 15px;
     border-radius: 8px;
     gap: 15px;
 
     text-decoration: none;
     color: var(--secundaryColor);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
 }
 .button:hover {
-    background-color: var(--primaryColor);
+    background-color: var(--quaternaryColor);
 }
 .mainFooter {
-    background-color: var(--primaryColor);
+    background-color: var(--quaternaryColor);
     
     padding: 25px;
 
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .section__curriculum{
@@ -115,9 +117,37 @@ body {
 }
 .section__curriculum__link{
     text-decoration: none;
-    color: var(--buttonInteraction);
+    color: var(--linkInteraction);
     font-weight: 600;
 }
 .section__curriculum__link:hover{
     color: var(--tertiaryColor);
+}
+@media (max-width:1660px){
+    .header{
+        padding: 10% 8% 0% 8%;
+    }
+    .header__menu{
+        justify-content: center;
+        gap: 5%;
+    }
+    .apresentation{
+        padding: 8%;
+        flex-direction:column-reverse;
+    }
+    .apresentation__content{
+        width: auto;
+    }
+
+}
+@media(max-width:692px){
+    .header__menu__button{
+        font-size: 1rem;
+    }
+    .apresentation__content__title{
+        font-size: 1.3rem;
+    }
+    .apresentation__content_text{
+        font-size: 1.1rem;
+    }
 }
